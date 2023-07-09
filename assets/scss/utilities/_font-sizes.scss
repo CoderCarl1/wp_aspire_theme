@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+@each $size-name, $size-value in $font-sizes {
+  .fs-#{$size-name} { 
+    font-size: $size-value;
+    line-height: 1.45;
+    @if $size-name > 600 {
+      line-height: 1.2;
+    }
+  }
+}
+
+:root {
+  @each $size-name, $size-value in $font-sizes {
+    --fontsize-#{$size-name}: #{$size-value};
+  }
+}
+
+h1 {
+  font-size: var(--fontsize-900);
+}
+h2 {
+  font-size: var(--fontsize-800);
+}
+h3 {
+  font-size: var(--fontsize-700);
+}
+h4 {
+  font-size: var(--fontsize-600);
+}
+body {
+  font-size: var(--fontsize-400);
+}

@@ -1,0 +1,16 @@
+{
+  "name": "aspire2life_custom",
+  "version": "1.0.0",
+  "description": "=== Aspire2Life === Contributors: Carl Davidson Requires at least: 6.0 Tested up to: 6.2.2 Requires PHP: 5.7 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "main": "index.js",
+  "scripts": {
+    "sass:dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+    "sass:prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.63.6"
+  }
+}

@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.flex {
+  display: flex;
+  gap: var(--flex-gap);
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--flex-gap);
+}
+
+.center {
+  text-align: center;
+}

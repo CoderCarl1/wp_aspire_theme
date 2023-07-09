@@ -1,0 +1,11 @@
+.services-row {
+  outline: 2px solid purple;
+  outline-offset: 4px;
+  display: flex;
+  gap: 1rem;
+}
+
+.services-card {
+  flex: 1 1 100%;
+  border: 1px solid red;
+}

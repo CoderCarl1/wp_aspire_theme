@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.fw-regular {
+  font-weight: $fw-400;
+}
+
+.fw-bold {
+  font-weight: $fw-700;
+}
+
+
+h1, h2, h3, h4 {
+  font-weight: var(--font-weight-bold);
+}

@@ -1,0 +1,56 @@
+/*
+Theme Name: Aspire2Life_custom
+Theme URI: 
+Author: Carl Davidson
+Author URI: 
+Description: Custom Theme for Aspire2Life
+Aspire2life is distributed under the terms of the GNU GPL.
+Requires at least: 6.0
+Tested up to: 6.2.2
+Requires PHP: 5.7
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: aspire2life
+Tags: accessibility-ready, block-styles, full-site-editing, Responsive, Accessible, Custom
+*/
+
+/* ======== 
+    nav 
+  ========= */
+
+  
+
+ 
+  
+/* ======== 
+    general 
+  ========= */
+
+
+
+/* ======== 
+    flow 
+  ========= */
+
+  .content-wrapper {
+    padding-inline: min(0px + 2.5vw, 2rem);
+  }
+
+  main > *:not(:last-child)  {
+    margin-block-end: 1em;
+  }
+
+  .flow-8 > *:not(:last-child)  {
+    margin-block-end: 8px;
+  }
+  .flow-16 > *:not(:last-child)  {
+    margin-block-end: 16px;
+  }
+  .flow-32 > *:not(:last-child)  {
+    margin-block-end: 32px;
+  }
+
+/* ======== 
+    flex 
+  ========= */

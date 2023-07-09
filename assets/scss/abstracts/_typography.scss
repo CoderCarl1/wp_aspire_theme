@@ -1,0 +1,11 @@
+$font-sizes: (
+  900: clamp(2.33rem, calc(1.19rem + 5.71vw), 6.33rem),
+  800: clamp(1.94rem, calc(1.29rem + 3.25vw), 4.22rem),
+  700: clamp(1.62rem, calc(1.28rem + 1.70vw), 2.81rem),
+  600: clamp(1.35rem, calc(1.20rem + 0.75vw), 1.88rem),
+  400: clamp(1.13rem, calc(1.09rem + 0.18vw), 1.25rem),
+  300: 1rem,
+);
+
+$fw-400: 400;
+$fw-700: 700;
