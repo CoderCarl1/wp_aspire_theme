@@ -12,7 +12,7 @@ $socials = new WP_Query(array(
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
-
+        
       </div>
       <div class="footer-socials">
         <?php if ($socials->have_posts()) : ?>
