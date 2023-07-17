@@ -1,5 +1,6 @@
 <?php
 /**
+ * TODO: move code from front-page and services into this part.
  * Template part for displaying a service card.
  */
 ?>

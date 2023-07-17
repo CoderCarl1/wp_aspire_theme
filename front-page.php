@@ -15,12 +15,11 @@
       }
     }
   ?>
-<h1>Servioces below</h1>
 <?php
 // Custom query to retrieve service posts
 $services_query = new WP_Query(array(
     'post_type' => 'service',
-    'posts_per_page' => 3, // Set the number of service posts to display
+    'posts_per_page' => 3,
 ));
 
 // Check if there are any service posts
@@ -46,7 +45,6 @@ if ($services_query->have_posts()) { ?>
 wp_reset_postdata();
 }
 ?>
-<h1>Servioces above</h1>
 </main>
 
 
