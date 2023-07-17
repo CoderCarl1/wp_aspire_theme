@@ -1,11 +1,50 @@
-.services-row {
-  outline: 2px solid purple;
-  outline-offset: 4px;
-  display: flex;
-  gap: 1rem;
-}
+@use '../abstracts' as *;
 
-.services-card {
-  flex: 1 1 100%;
-  border: 1px solid red;
+.services-row {
+  --flex-gap: 1em;
+  --service-border: 1px solid var(--wp--preset--color--custom-aspire-main-light);
+
+  @media (min-width: 450px) {
+    --serviceCard-basis: 100%;
+    --service-border: 0;
+    
+  }
+
+}
+.service-card {
+  --_serviceCard-basis: var(--serviceCard-basis, 20%);
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 var(--_serviceCard-basis);
+  gap: var(--flex-gap);
+  min-width: 15ch;
+  padding: 4px 8px;
+  border: var(--service-border);
+
+  @include margin($y: 8px, $x: auto, $bottom: 16px);
+
+  &__image {
+    @include margin(0, auto);
+    aspect-ratio: 1;
+    min-width: 150px;
+  }
+
+  // Full page card
+  $parent: &;
+  &__fullsize {
+    & + #{$parent} { 
+      @include margin($y: 16px, $x: auto, $bottom: 32px);
+    }
+    flex-wrap: nowrap;
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    #{$parent}__image {
+     flex: 1 1 20%;
+    }
+    #{$parent}__blurb {
+     flex: 1 1 70%;
+  
+    }
+  }  
 }

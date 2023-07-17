@@ -15,5 +15,3 @@
         <?php the_field('short_explanation'); ?>
     </div>
 </div>
-
-lorem

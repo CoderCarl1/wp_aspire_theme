@@ -15,27 +15,24 @@ $socials = new WP_Query(array(
 
       </div>
       <div class="footer-socials">
-        <h1>below</h1>
         <?php if ($socials->have_posts()) : ?>
-    <ul class="navbar-social">
-        <?php while ($socials->have_posts()) : $socials->the_post(); ?>
-            <?php
-            $social_image = get_field('social_image');
-            $social_url = get_field('social_url');
-            $social_text = get_field('social_text');
-            ?>
+        <ul class="navbar-social">
+            <?php while ($socials->have_posts()) : $socials->the_post(); ?>
+                <?php
+                $social_image = get_field('social_image');
+                $social_url = get_field('social_url');
+                $social_text = get_field('social_text');
+                ?>
 
-            <li>
-                <a href="<?php echo esc_url($social_url); ?>">
-                  <img src="<?php echo esc_url($social_image['url']);  ?>" alt="<?php echo $social_text; ?>">
-                </a>
-            </li>
-        <?php endwhile; ?>
-    </ul>
-
+                <li>
+                    <a href="<?php echo esc_url($social_url); ?>">
+                      <img src="<?php echo esc_url($social_image['url']);  ?>" alt="<?php echo $social_text; ?>">
+                    </a>
+                </li>
+            <?php endwhile; ?>
+        </ul>
     <?php wp_reset_postdata(); ?>
-<?php endif; ?>
-        <h1>above</h1>
+    <?php endif; ?>
       </div>
     </div>
     <p class="footer-copyright center"> &copy; Aspire2Life 2023. ABN 95 636 793 934</p>

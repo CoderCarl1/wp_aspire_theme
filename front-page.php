@@ -33,9 +33,9 @@ if ($services_query->have_posts()) { ?>
       $service_short_explanation = get_field('service_short_explanation');
       $service_detailed_explanation = get_field('service_detailed_explanation');
       ?>
-      <div class="service-card">
+      <div class="service-card ">
           <?php if ($service_image) : ?>
-              <img class="service-card__image" src="<?php echo esc_url($service_image['url']); ?>" alt="<?php echo esc_attr($service_image['alt']); ?>">
+              <img class="service-card__image " src="<?php echo esc_url($service_image['url']); ?>" alt="<?php echo esc_attr($service_image['alt']); ?>">
           <?php endif; ?>
           <p class="service-card__blurb"><?php echo esc_html($service_short_explanation); ?></p>
       </div>

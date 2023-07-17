@@ -140,60 +140,8 @@ if (!function_exists('aspire_custom_post_services_registration')) {
         ),
     ));
 }
-
-
 }
 
-if (!function_exists('aspire_reorder_dashboard_menu')) {
-  add_action('admin_menu', 'aspire_reorder_dashboard_menu');
-
-  function aspire_reorder_dashboard_menu() {
-    // Get the global $menu variable
-    global $menu;
-
-    // Define the desired menu order
-    $menu_order = array(
-        'edit.php?post_type=social', // Socials (New post type)
-        'edit.php?post_type=service', // Services (New post type)
-        'edit.php?post_type=page', // Pages
-        'index.php', // Dashboard
-        'edit.php', // Posts
-        'upload.php', // Media
-        'edit-comments.php', // Comments
-        'themes.php', // Appearance
-        'plugins.php', // Plugins
-        'users.php', // Users
-        'tools.php', // Tools
-        'options-general.php', // Settings
-    );
-
-    // Create an array to hold the reordered menu items
-    $reordered_menu = array();
-
-    // Loop through the menu items and reorder them
-    foreach ($menu as $menu_item) {
-        // Get the menu slug from the menu item URL
-        $menu_slug = remove_query_arg(array('settings-updated', 'updated'), $menu_item[2]);
-
-        // Find the position of the menu item in the desired order
-        $position = array_search($menu_slug, $menu_order);
-
-        // If the menu item is found in the desired order, add it to the reordered menu array
-        if ($position !== false) {
-            $reordered_menu[$position] = $menu_item;
-        }
-    }
-
-    // Sort the reordered menu items based on the new positions
-    ksort($reordered_menu);
-
-    // Reset the menu keys to ensure continuous numerical keys
-    $reordered_menu = array_values($reordered_menu);
-
-    // Assign the reordered menu items back to the global $menu variable
-    $menu = $reordered_menu;
-  }
-}
 
 if (!function_exists('aspire_custom_taxonomy_imagecategory')) {
   // TODO: WIP

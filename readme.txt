@@ -10,6 +10,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Custom Theme for Aspire2Life
 
+- required plugins: ACF (advanced custom fields)
+
+====TODO=== 
+- create a services page and link to the services Template
+- Add to menus
+
 == Changelog ==
 
 = 0.0.1 =
